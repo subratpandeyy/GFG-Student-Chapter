@@ -1,4 +1,4 @@
-import SP from '../assets/sec/Sp.png'
+import SP from '../assets/sec/SP.png'
 import PV from '../assets/third/PV.png'
 
 const DeveloperCard = () => {
