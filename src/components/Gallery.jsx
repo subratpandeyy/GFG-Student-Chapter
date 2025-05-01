@@ -12,14 +12,14 @@ export default function Gallery() {
       <h1>Gallery</h1>
     <div className="gallery">
       <div className="column">
-        <div className="img-wrapper"><img src={img1} alt="gallery" /></div>
-        <div className="img-wrapper"><img src={img4} alt="gallery" /></div>
-        <div className="img-wrapper full"><img src={img2} alt="gallery" /></div>
+        <div className="img-wrapper"><img src={img1} alt="gallery" loading='lazy'/></div>
+        <div className="img-wrapper"><img src={img4} alt="gallery" loading='lazy' /></div>
+        <div className="img-wrapper full"><img src={img2} alt="gallery" loading='lazy' /></div>
       </div>
       <div className="column">
-        <div className="img-wrapper full"><img src={img3} alt="gallery" /></div>
-        <div className="img-wrapper"><img src={img5} alt="gallery" /></div>
-        <div className="img-wrapper"><img src={article} alt="gallery" /></div>
+        <div className="img-wrapper full"><img src={img3} alt="gallery" loading='lazy' /></div>
+        <div className="img-wrapper"><img src={img5} alt="gallery" loading='lazy' /></div>
+        <div className="img-wrapper"><img src={article} alt="gallery" loading='lazy' /></div>
       </div>
     </div>
 </section>

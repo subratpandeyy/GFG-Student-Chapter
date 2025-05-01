@@ -3,6 +3,7 @@ import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsThreadsFill } from "react-icons/bs";
+import DeveloperCard from "./DeveloperCard";
 
 export default function Footer() {
   return (
@@ -23,6 +24,7 @@ export default function Footer() {
             <li><a href="https://www.threads.com/@geeksforgeeks_gietu?xmt=AQGzrGqLLf_BXL4Xs195HZUpnAnxhUy25gXc4y9JJz8ITUs"><BsThreadsFill /></a></li>
           </ul>
         </div>
+        <DeveloperCard />
         <hr className="footer-divider" />
         <span className="footer-copy">
           © 2025 <Link to={'/'}>GFG GIETU™</Link>. All Rights Reserved.

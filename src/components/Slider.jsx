@@ -48,6 +48,8 @@ const TeamSection = () => {
           They collaborate as a team to enable learning about programming for everyone on campus.
           </p>
         </div>
+        <div className='team-carousel'>
+
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
@@ -64,6 +66,7 @@ const TeamSection = () => {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>
