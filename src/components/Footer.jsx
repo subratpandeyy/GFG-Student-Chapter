@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsThreadsFill } from "react-icons/bs";
 import DeveloperCard from "./DeveloperCard";
+import logo from '../assets/logo.svg'
 
 export default function Footer() {
   return (
@@ -11,7 +12,8 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <Link to={'/'} className="footer-logo">
-            <span className="logo-text"><span>GFG</span> GIETU</span>
+            {/* <span className="logo-text"><span>GFG</span> GIETU</span> */}
+            <span className="logo-text"><img src={logo} /> Gandhi Institute of Engineering & Technology</span>
           </Link>
           <ul className="footer-links">
             <li><a href="mailto:geeksforgeeksgietustudentchapt@gmail.com">Contact</a></li>

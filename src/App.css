@@ -68,10 +68,16 @@ span {
   color: #2f8d46;
   font-weight: 800;
 }
+.head-logo {
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
  .head-logo img{
   height: 45px;
   width: auto;
-  display: inline-block;
  }
 .logo a {
   text-decoration: none;
@@ -333,6 +339,7 @@ ul li a{
   font-size: 1.5rem;
   font-weight: 700;
   color: #2f8d46;
+  text-align: center;
 }
 .developer-container {
   display: flex;
@@ -372,6 +379,7 @@ ul li a{
   background-color: #0f0f0f;
   color: #d1d5db;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-container {
@@ -398,12 +406,18 @@ ul li a{
   height: 32px;
   margin-right: 10px;
 }
-
 .logo-text {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+}
+.logo-text img{
+  height: 60px;
+  width: auto;
+  align-items: center;
 }
 
 .footer-links, .social-links {
@@ -586,7 +600,7 @@ ul li a{
   }
   .hero-txt {
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(8px);
     padding: 20px;
     border-radius: 10px;
@@ -613,6 +627,11 @@ ul li a{
   }
   .team-description {
     max-width: 300px;
+  }
+  .logo-text {
+    font-size: 0.8rem;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
