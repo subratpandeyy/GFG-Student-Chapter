@@ -1,19 +1,20 @@
-import Lead from '../assets/third/Lead.png'
-import SM from '../assets/third/SM.png'
-import SD from '../assets/third/SD.png'
-import SO from '../assets/third/SO.png'
-import PC from '../assets/third/PC.png'
-import DB from '../assets/third/DB.png'
-import SK from '../assets/third/SK.png'
-import PV from '../assets/third/PV.png'
+import React, { useEffect, useState } from "react";
+import Lead from "../assets/third/Lead.png";
+import SM from "../assets/third/SM.png";
+import SD from "../assets/third/SD.png";
+import SO from "../assets/third/SO.png";
+import PC from "../assets/third/PC.png";
+import DB from "../assets/third/DB.png";
+import SK from "../assets/third/SK.png";
+import PV from "../assets/third/PV.png";
 
-import H from '../assets/sec/H.png'
-import B from '../assets/sec/B.png'
-import SP from '../assets/sec/SP.png'
-import A from '../assets/sec/A.png'
-import S from '../assets/sec/S.png'
-import E from '../assets/sec/E.png'
-import AK from '../assets/sec/AK.png'
+import H from "../assets/sec/H.png";
+import B from "../assets/sec/B.png";
+import SP from "../assets/sec/SP.png";
+import A from "../assets/sec/A.png";
+import S from "../assets/sec/S.png";
+import E from "../assets/sec/E.png";
+import AK from "../assets/sec/AK.png";
 
 const teamMembers = [
   { name: "Amiya Bhanja", role: "Lead", img: Lead },
@@ -24,7 +25,6 @@ const teamMembers = [
   { name: "Deepak Behera", role: "Design & Branding Lead", img: DB },
   { name: "Sasi Kiran", role: "Public & Outreach Lead", img: SK },
   { name: "Potnuru Vamsi Krishna", role: "Social Media Lead", img: PV },
-
   { name: "Harmesh Behera", role: "Co-member (Tech)", img: H },
   { name: "Bibhu Kalyan Nayak", role: "Co-member (Tech)", img: B },
   { name: "Subrat Pandey", role: "Co-member (Tech)", img: SP },
@@ -35,38 +35,46 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalMembers = teamMembers.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % totalMembers);
+    }, 2500); // Slide every 2.5s
+    return () => clearInterval(interval);
+  }, [totalMembers]);
+
+  const currentMember = teamMembers[currentIndex];
+
   return (
     <section className="container team-section">
       <div className="team-container">
         <div className="team-header">
           <h1 className="team-title">Our Team</h1>
           <p className="team-description">
-          The GIETU team of GFG Student Chapter comprises students interested in coding and technology. 
-          They organize and conduct events such as coding challenges, workshops, 
-          and study sessions to enable others to learn. Each of them plays different roles, 
-          like event organizing, material designing, or assisting in communication. 
-          They collaborate as a team to enable learning about programming for everyone on campus.
+            The GIETU team of GFG Student Chapter comprises students interested in coding and technology. 
+            They organize and conduct events such as coding challenges, workshops, 
+            and study sessions to enable others to learn. Each of them plays different roles, 
+            like event organizing, material designing, or assisting in communication. 
+            They collaborate as a team to enable learning about programming for everyone on campus.
           </p>
         </div>
-        <div className='team-carousel'>
 
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-member">
-              <div className="team-card">
-                <img
-                  alt={member.name}
-                  className="team-avatar"
-                  src={member.img}
-                />
-                <div className="team-info">
-                  <h2 className="team-name">{member.name}</h2>
-                  <p className="team-role">{member.role}</p>
-                </div>
+        <div className="team-carousel">
+          <div className="team-member">
+            <div className="team-card fade-slide">
+              <img
+                alt={currentMember.name}
+                className="team-avatar"
+                src={currentMember.img}
+              />
+              <div className="team-info">
+                <h2 className="team-name">{currentMember.name}</h2>
+                <p className="team-role">{currentMember.role}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
         </div>
       </div>
     </section>

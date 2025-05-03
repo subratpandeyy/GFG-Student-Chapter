@@ -12,8 +12,7 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <Link to={'/'} className="footer-logo">
-            {/* <span className="logo-text"><span>GFG</span> GIETU</span> */}
-            <span className="logo-text"><img src={logo} /> Gandhi Institute of Engineering & Technology</span>
+            <span className="logo-text"><img src={logo} /> Gandhi Institute of Engineering & Technology University</span>
           </Link>
           <ul className="footer-links">
             <li><a href="mailto:geeksforgeeksgietustudentchapt@gmail.com">Contact</a></li>

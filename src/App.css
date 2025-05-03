@@ -11,6 +11,7 @@
 
 body {
   background: #0f0f0f;
+  scroll-behavior: smooth;
 }
 
 h1{
@@ -237,6 +238,7 @@ ul li a{
 .teamcard {
   padding: 30px;
 }
+
 .teamcard img {
   padding-right: 20px;
   height: 100px;
@@ -263,7 +265,7 @@ ul li a{
 /* Slider */
 
 .team-section {
-  color: #4b5563; /* text-gray-600 */
+  color: #4b5563;
   font-family: sans-serif;
   padding: 6rem 0;
 }
@@ -276,7 +278,7 @@ ul li a{
 
 .team-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .team-description {
@@ -320,7 +322,7 @@ ul li a{
 }
 
 .team-name {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
 }
@@ -328,6 +330,29 @@ ul li a{
 .team-role {
   color: #6b7280; /* text-gray-500 */
 }
+
+.team-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card.fade-slide {
+  animation: fadeSlide 0.6s ease-in-out;
+  transition: transform 0.4s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 
 /* Dev Card */
 .dev {
@@ -428,7 +453,7 @@ ul li a{
   padding: 0;
   margin: 0;
   justify-content: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: 0.3s ease;
 }
 .social-links {
@@ -593,6 +618,7 @@ ul li a{
   .gallery-section h1, .team-title, .ideology-title {
     font-size: 2rem;
   }
+
   .hero-container{
     margin-top: 150px;
     width: 300px;
@@ -632,6 +658,9 @@ ul li a{
     font-size: 0.8rem;
     flex-direction: column;
     text-align: center;
+  }
+  .team-name {
+    font-size: 1rem;
   }
 }
 
@@ -753,3 +782,4 @@ ul li a{
     opacity: 0.5;
   }
 }
+
